@@ -15,7 +15,7 @@ This repository contains my Machine Learning learning journey, including:
 - Machine Learning algorithms implemented from scratch
 - Practical Machine Learning projects
 
-The main goal of this repository is to understand **how Machine Learning algorithms work**, rather than only using pre-built libraries.
+The main goal of this repository is to understand **how Machine Learning algorithms work**.
 
 ---
 
@@ -33,17 +33,8 @@ The main goal of this repository is to understand **how Machine Learning algorit
 
 ## 📚 Topics Covered
 
-### 1. Python for Machine Learning
 
-- Python basics
-- Functions
-- Lists, Tuples, Sets and Dictionaries
-- Object-Oriented Programming
-- NumPy
-- Pandas
-- Matplotlib
-
-### 2. Data Preprocessing
+### 1. Data Preprocessing
 
 - Loading datasets
 - Handling missing values
@@ -55,7 +46,7 @@ The main goal of this repository is to understand **how Machine Learning algorit
 - Train/Test Split
 - Feature Selection
 
-### 3. Exploratory Data Analysis
+### 2. Exploratory Data Analysis
 
 - Understanding datasets
 - Statistical analysis
@@ -63,13 +54,15 @@ The main goal of this repository is to understand **how Machine Learning algorit
 - Correlation analysis
 - Outlier detection
 
-### 4. Supervised Learning
+### 3. Supervised Learning
 
 #### Regression
 
 - Linear Regression
 - Multiple Linear Regression
 - Polynomial Regression
+- SVR
+- Random forest tree
 
 #### Classification
 
@@ -80,13 +73,13 @@ The main goal of this repository is to understand **how Machine Learning algorit
 - Support Vector Machine
 - Naive Bayes
 
-### 5. Unsupervised Learning
+### 4. Unsupervised Learning
 
 - K-Means Clustering
 - Hierarchical Clustering
 - Principal Component Analysis (PCA)
 
-### 6. Model Evaluation
+### 5. Model Evaluation
 
 - Accuracy
 - Precision
@@ -99,18 +92,6 @@ The main goal of this repository is to understand **how Machine Learning algorit
 - R² Score
 - Cross Validation
 
-### 7. Algorithms From Scratch
-
-The following algorithms are implemented without directly using their Scikit-learn implementations:
-
-- Linear Regression
-- Logistic Regression
-- K-Nearest Neighbors
-- K-Means
-- Decision Tree
-- Gradient Descent
-
----
 
 ## 📂 Repository Structure
 
@@ -119,12 +100,11 @@ machine-learning-from-scratch/
 │
 ├── 01_python_for_ml/
 ├── 02_data_preprocessing/
-├── 03_eda/
-├── 04_supervised_learning/
-├── 05_unsupervised_learning/
-├── 06_model_evaluation/
-├── 07_algorithms_from_scratch/
-├── 08_projects/
+├── 03_supervised_learning/
+├── 04_unsupervised_learning/
+├── 05_model_evaluation/
+├── 06_algorithms_from_scratch/
+├── 07_projects/
 │
 ├── requirements.txt
 └── README.md
