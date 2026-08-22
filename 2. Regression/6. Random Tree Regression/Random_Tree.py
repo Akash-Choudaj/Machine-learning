@@ -26,3 +26,8 @@ plt.title('Truth or Bluff (Random Forest Regression)')
 plt.xlabel('Position level')
 plt.ylabel('Salary')
 plt.show()
+
+# Evaluating the model by r2 
+from sklearn.metrics import r2_score
+y_pred = regressor.predict(x)
+print("R² Score:", r2_score(y, y_pred)) # y = actual value and y_pred = predicted value from model
