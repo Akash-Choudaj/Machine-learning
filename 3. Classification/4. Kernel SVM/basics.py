@@ -20,10 +20,31 @@ sc = StandardScaler()
 X_train = sc.fit_transform(x_train)
 X_test = sc.transform(x_test)
 
+# implementing Grid Search for 
+from sklearn.model_selection import GridSearchCV
+from sklearn.svm import SVC
+parameters = {
+    'C': [0.1, 1, 10, 100],
+    'gamma': [0.01, 0.1, 1],
+    'kernel': ['rbf']
+}
+grid_search = GridSearchCV(
+    SVC(),
+    param_grid=parameters,
+    cv=5,
+    scoring='accuracy'
+)
+
+grid_search.fit(X_train, y_train)
+print("Best Parameters:", grid_search.best_params_)
+print("Best Accuracy:", grid_search.best_score_)
+
+# classifier = grid_search.best_estimator_ # automatically apply best svm for model
+
 # Training the model by kernel
 from sklearn.svm import SVC
-classifier = SVC(kernel='rbf', random_state=0) # here kernel will define which type to use e.g rbf, linear, poly or sigmoid
-classifier.fit(x_train, y_train)
+classifier = SVC(kernel='rbf', random_state=0, C = 10, gamma = 0.1, ) # here kernel will define which type to use e.g rbf, linear, poly or sigmoid and here C and gamma is predicted by gridsearch cv 
+classifier.fit(X_train, y_train)
 
 # Predicting a new result
 print(classifier.predict(sc.transform([[30,87000]])))
@@ -71,3 +92,4 @@ plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
+
