@@ -19,7 +19,7 @@ plt.show()
 from sklearn.cluster import AgglomerativeClustering
 # Create the Hierarchical Clustering model
 hc = AgglomerativeClustering(
-    n_clusters=3,          # Number of clusters
+    n_clusters=5,          # Number of clusters
     metric='euclidean',    # Distance used to measure similarity
     linkage='ward'         # Method used to merge clusters
 )
@@ -34,7 +34,7 @@ plt.scatter(x[y_hc == 2, 0], x[y_hc == 2, 1], s = 100, c = 'green', label = 'Clu
 plt.scatter(x[y_hc == 3, 0], x[y_hc == 3, 1], s = 100, c = 'cyan', label = 'Cluster 4')
 plt.scatter(x[y_hc == 4, 0], x[y_hc == 4, 1], s = 100, c = 'magenta', label = 'Cluster 5')
 plt.title('Clusters of customers')
-plt.xlabel('Annual Income (k$)')
+plt.xlabel('Annual Income')
 plt.ylabel('Spending Score (1-100)')
 plt.legend()
 plt.show()
