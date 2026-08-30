@@ -30,7 +30,7 @@ def inspect(results):
 resultsinDataFrame = pd.DataFrame(inspect(results), columns = ['Left Hand Side', 'Right Hand Side', 'Support', 'Confidence', 'Lift'])
 
 ## Displaying the results non sorted
-resultsinDataFrame
+print(resultsinDataFrame)
 
 ## Displaying the results sorted by descending lifts
-resultsinDataFrame.nlargest(n = 10, columns = 'Lift')
+print(resultsinDataFrame.nlargest(n = 10, columns = 'Lift'))
