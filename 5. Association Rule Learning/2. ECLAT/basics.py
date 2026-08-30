@@ -29,4 +29,4 @@ def inspect(results):
 resultsinDataFrame = pd.DataFrame(inspect(results), columns = ['Product 1', 'Product 2', 'Support'])
 
 ## Displaying the results sorted by descending supports
-resultsinDataFrame.nlargest(n = 10, columns = 'Support')
+print(resultsinDataFrame.nlargest(n = 10, columns = 'Support'))
